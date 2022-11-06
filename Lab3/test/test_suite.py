@@ -16,7 +16,7 @@ def my_suite():
 
     cont = True
     while cont:
-        print("Please select from one of the following options:\n"
+        print("\nPlease select from one of the following options:\n"
               "- [c] for testing the area of a circle\n"
               "- [t] for testing the area of a trapezium\n"
               "- [e] for testing the area of an ellipse\n"
@@ -31,17 +31,14 @@ def my_suite():
         elif selection == "t":
             suite.addTest(unittest.makeSuite(TestTrapezium))
             print(runner.run(suite))
-            print(selection)
             cont = False
         elif selection == "e":
             suite.addTest(unittest.makeSuite(TestEllipse))
             print(runner.run(suite))
-            print(selection)
             cont = False
         elif selection == "r":
             suite.addTest(unittest.makeSuite(TestRhombus))
             print(runner.run(suite))
-            print(selection)
             cont = False
         elif selection == "q":
             cont = False
