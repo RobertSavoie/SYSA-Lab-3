@@ -4,28 +4,28 @@
 # Lab 3 - Group 15
 import unittest
 
-from LAB3.app.rhombus import Rhombus
+from Lab3.app.circle import Circle
 
 
 class TestCircle(unittest.TestCase):
     def setUp(self):
-        self.rhombus = Rhombus()
+        self.circle = Circle()
 
     def tearDown(self):
         print("\n Result: ", self.shortDescription())
 
     def test_circle_area_radius_less_than_zero(self):
-        """Exception raised when radius of rhombus < 0"""
-        self.assertEqual(self.rhombus.rhombus_area(-1, -1), -1)
+        """Exception raised when radius of circle < 0"""
+        self.assertEqual(self.circle.circle_area(-1), -1)
         self.assertRaises(ValueError)
 
     def test_circle_area_greater_than_zero(self):
-        """Test area of rhombus when dimensions >= 0"""
-        self.assertEqual(self.rhombus.rhombus_area(10, 10), 50)
+        """Test area of circle when radius >= 0"""
+        self.assertEqual(self.circle.circle_area(10), 314.16)
 
     def test_circle_area_invalid_input(self):
-        """Exception raised when area of rhombus is invalid, boolean, or text"""
-        c = self.rhombus.rhombus_area('hello')
+        """Exception raised when area of circle is invalid, boolean, or text"""
+        c = self.circle.circle_area('hello')
         self.assertEqual(c.radius, 'hello')
         self.assertRaises(TypeError)
 
