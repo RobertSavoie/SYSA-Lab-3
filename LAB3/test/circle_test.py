@@ -16,8 +16,7 @@ class TestCircle(unittest.TestCase):
 
     def test_circle_area_radius_less_than_zero(self):
         """Exception raised when radius of circle < 0"""
-        c = self.circle.circle_area(-1)
-        self.assertEqual(c.radius, -1)
+        self.assertEqual(self.circle.circle_area(-1), -1)
         self.assertRaises(ValueError)
 
     def test_circle_area_greater_than_zero(self):

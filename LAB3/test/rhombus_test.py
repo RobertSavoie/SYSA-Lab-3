@@ -24,7 +24,7 @@ class TestCircle(unittest.TestCase):
         self.assertEqual(self.rhombus.rhombus_area(10, 10), 50)
 
     def test_circle_area_invalid_input(self):
-        """Exception raised when area of circle is invalid, boolean, or text"""
+        """Exception raised when area of rhombus is invalid, boolean, or text"""
         c = self.rhombus.rhombus_area('hello')
         self.assertEqual(c.radius, 'hello')
         self.assertRaises(TypeError)
