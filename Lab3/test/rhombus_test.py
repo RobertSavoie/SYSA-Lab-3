@@ -7,7 +7,7 @@ import unittest
 from Lab3.app.rhombus import Rhombus
 
 
-class TestCircle(unittest.TestCase):
+class TestRhombus(unittest.TestCase):
     def setUp(self):
         self.rhombus = Rhombus()
 
