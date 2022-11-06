@@ -8,7 +8,7 @@ from math import pi
 
 class Circle(object):
 
-    def circle_area(r):
+    def circle_area(self, r):
         return pi * (r ** 2)
 
     # radii = [2, 0, -3, 2 + 5j, True, "radius"]
