@@ -12,7 +12,7 @@ class TestCircle(unittest.TestCase):
         self.circle = Circle()
 
     def tearDown(self):
-        print("\n end of test ", self.shortDescription())
+        print("\n Result: ", self.shortDescription())
 
     def test_circle_area_radius_less_than_zero(self):
         """Exception raised when radius of circle < 0"""
@@ -22,8 +22,7 @@ class TestCircle(unittest.TestCase):
 
     def test_circle_area_greater_than_zero(self):
         """Test area of circle when radius >= 0"""
-        c = self.circle.circle_area(10)
-        self.assertEqual(c.radius, 10)
+        self.assertEqual(self.circle.circle_area(10), 314.16)
 
     def test_circle_area_invalid_input(self):
         """Exception raised when area of circle is invalid, boolean, or text"""
