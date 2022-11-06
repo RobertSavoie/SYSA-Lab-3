@@ -16,12 +16,12 @@ class TestTrapezium(unittest.TestCase):
         print("\n Result: ", self.shortDescription())
 
     def test_trapezium_area_radius_less_than_zero(self):
-        """Exception raised when radius of trapezium < 0"""
+        """Exception raised when dimensions of trapezium < 0"""
         self.assertEqual(self.trapezium.trapezium_area, -1)
         self.assertRaises(ValueError)
 
     def test_trapezium_area_greater_than_zero(self):
-        """Test area of trapezium when radius >= 0"""
+        """Test area of trapezium when dimensions >= 0"""
         self.assertEqual(self.trapezium.trapezium_area(10, 5, 6), 45)
 
     def test_trapezium_area_invalid_input(self):

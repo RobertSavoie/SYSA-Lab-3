@@ -15,7 +15,7 @@ class TestRhombus(unittest.TestCase):
         print("\n Result: ", self.shortDescription())
 
     def test_circle_area_radius_less_than_zero(self):
-        """Exception raised when radius of rhombus < 0"""
+        """Exception raised when dimensions of rhombus < 0"""
         self.assertEqual(self.rhombus.rhombus_area(-1, -1), -1)
         self.assertRaises(ValueError)
 
