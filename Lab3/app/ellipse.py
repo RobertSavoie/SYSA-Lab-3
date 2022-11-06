@@ -8,7 +8,7 @@ from math import pi
 
 class Ellipse(object):
     def ellipse_area(self, a, b):
-        area = pi * a * b
+        area = round(pi * a * b)
 
         return area
 
