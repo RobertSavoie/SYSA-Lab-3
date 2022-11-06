@@ -1,16 +1,37 @@
-# This is a sample Python script.
+# Megan Gagliardi & Rob Savoie
+# SYSA 3204
+# 11/5/2022
+# Lab 3 - Group 15
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from Lab3.test.circle_test_suite import circle_suite
+from Lab3.test.ellipse_test_suite import ellipse_suite
+from Lab3.test.rhombus_test_suite import rhombus_suite
+from Lab3.test.trapezium_test_suite import trapezium_suite
 
+cont = True
+while cont:
+    print("\nPlease select from one of the following options:\n"
+          "- [c] for testing the area of a circle\n"
+          "- [t] for testing the area of a trapezium\n"
+          "- [e] for testing the area of an ellipse\n"
+          "- [r] for testing the area of a rhombus\n"
+          "- [q] to quit\n")
+    selection = input("What would you like to do? ")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    if selection == "c":
+        circle_suite()
+        cont = False
+    elif selection == "t":
+        trapezium_suite()
+        cont = False
+    elif selection == "e":
+        ellipse_suite()
+        cont = False
+    elif selection == "r":
+        rhombus_suite()
+        cont = False
+    elif selection == "q":
+        cont = False
+    else:
+        print("Please enter a valid input.")
+        cont = False
